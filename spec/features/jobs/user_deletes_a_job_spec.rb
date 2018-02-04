@@ -9,8 +9,6 @@ describe "As a user" do
 
     click_on "Delete #{job.title}"
 
-    save_and_open_page
-
     expect(page).to have_content("#{job.title} was successfully deleted!")
   end
 end

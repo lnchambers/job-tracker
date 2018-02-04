@@ -5,17 +5,19 @@
 <main class="home-container">
   <section class="home-main"></section>
   <section class="home-side">
-    <section class="home-side-top"></section>
-    <section class="home-side-bottom">
-      <ul>
-        <% @companies.each do |company| %>
-        <li class=company_<%= company.id %>>
-          <%= link_to company.name, company_path(company) %>:
-          <%= link_to "Edit", edit_company_path(company) %>
-          <%= link_to "Delete", company_path(company), method: "delete" %>
-        </li>
-        <% end %>
-      </ul>
+    <section class="home-side-container">
+      <section class="home-side-top"></section>
+      <section class="home-side-bottom">
+        <ul>
+          <% @companies.each do |company| %>
+          <li class=company_<%= company.id %>>
+            <%= link_to company.name, company_path(company) %>:
+            <%= link_to "Edit", edit_company_path(company) %>
+            <%= link_to "Delete", company_path(company), method: "delete" %>
+          </li>
+          <% end %>
+        </ul>
+      </section>
     </section>
   </section>
 </main>

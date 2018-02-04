@@ -10,34 +10,48 @@
  * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
  * file per style scope.
  *
- *= require_tree .
- *= require_self
+
+
  */
+
 
  body {
    background-color: #fff;
+   margin: 0px;
  }
 
  .home-container {
    background-color: #000;
    display: flex;
+   width: 100%;
+   height: 100%;
  }
 
  .home-side-container {
    display: flex;
    flex-direction: column;
+   width: 100%;
+   height: 860px;
  }
 
  .home-main {
    border-right: 10px solid #000;
    background-image: url("https://images.unsplash.com/photo-1493995055064-702227616052?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=9fc7e95a9b14416091269a9f1644cc01&auto=format&fit=crop&w=668&q=80");
+   width: 46%;
+   background-size: cover;
+   background-repeat: no-repeat;
  }
 
  .home-side-top {
    background-image: url("https://images.unsplash.com/photo-1498049860654-af1a5c566876?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=ee039d16c1a1638867bb1cc95bf3b833&auto=format&fit=crop&w=1650&q=80");
+   height: 33%;
+   width: 100%;
+   background-size: cover
  }
 
  .home-side-bottom {
    border-top: 10px solid #000;
    background-color: #fff;
+   width: 790px;
+   height: 60%;
  }
