@@ -7,7 +7,7 @@ describe "As a user" do
 
     visit company_job_path(company, job)
 
-    click_on "Delete #{job.title}"
+    click_on "Delete"
 
     expect(page).to have_content("#{job.title} was successfully deleted!")
   end
