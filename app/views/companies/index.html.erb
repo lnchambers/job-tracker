@@ -2,12 +2,12 @@
   <title>Job Tracker</title>
   <link rel="stylesheet" type="text/css" href="../assets/stylesheets/application.css">
 </head>
-<main class="home-container">
-  <section class="home-main"></section>
-  <section class="home-side">
-    <section class="home-side-container">
-      <section class="home-side-top"></section>
-      <section class="home-side-bottom">
+<main class="main-container">
+  <section class="main-left"></section>
+  <section class="main-side">
+    <section class="main-side-container">
+      <section class="main-side-top"></section>
+      <section class="main-side-bottom">
         <ul>
           <% @companies.each do |company| %>
           <li class=company_<%= company.id %>>
