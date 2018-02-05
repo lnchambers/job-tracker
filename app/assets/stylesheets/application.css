@@ -31,7 +31,7 @@
    display: flex;
    flex-direction: column;
    width: 100%;
-   height: 860px;
+   height: 810px;
  }
 
  .home-main {
@@ -40,6 +40,7 @@
    width: 46%;
    background-size: cover;
    background-repeat: no-repeat;
+   height: 810px;
  }
 
  .home-side-top {
@@ -53,5 +54,13 @@
    border-top: 10px solid #000;
    background-color: #fff;
    width: 790px;
-   height: 60%;
+   height: 67%;
+   display: flex;
+   justify-content: space-around;
+ }
+
+ .home-side-bottom h1 {
+   font-size: 40pt;
+   text-emphasis: bold;
+   margin-right: 350px;
  }
