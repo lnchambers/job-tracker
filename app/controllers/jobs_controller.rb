@@ -14,7 +14,7 @@ class JobsController < ApplicationController
     @job = @company.jobs.new(job_params)
     if @job.save
       flash[:success] = "You created #{@job.title} at #{@company.name}"
-      redirect_to company_job_path(@company, @job)
+      redirect_to company_jobs_path(@company, @job)
     else
       render :new
     end
@@ -25,7 +25,6 @@ class JobsController < ApplicationController
   end
 
   def edit
-    binding.pry
     @job = Job.find(params[:id])
   end
 
@@ -33,7 +32,7 @@ class JobsController < ApplicationController
     @job = Job.find(params[:id])
     @job.update(job_params)
     if @job.save
-      flash[:success] = "#{@job.name} updated!"
+      flash[:success] = "#{@job.title} updated!"
       redirect_to job_path(@job)
     else
       render :edit
@@ -43,9 +42,8 @@ class JobsController < ApplicationController
   def destroy
     job = Job.find(params[:id])
     job.destroy
-
-    flash[:success] = "#{job.name} was successfully deleted!"
-    redirect_to jobs_path
+    flash[:success] = "#{job.title} was successfully deleted!"
+    redirect_to companies_path
   end
 
   private

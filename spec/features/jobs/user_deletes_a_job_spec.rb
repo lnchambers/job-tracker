@@ -5,7 +5,7 @@ describe "As a user" do
     company = Company.create!(name: "Opakawagalaga")
     job = Job.create!(title: "Work For Free", level_of_interest: 100, city: "Home", company_id: company.id)
 
-    visit company_job_path(company, job)
+    visit company_jobs_path(company, job)
 
     click_on "Delete"
 

@@ -8,8 +8,8 @@ All Jobs for <strong><%= @company.name %></strong>
   <% @jobs.each do |job| %>
   <li class=job_<%= job.id %>>
     <%= link_to job.title, company_jobs_path(job) %>:
-    <%= link_to "Edit", edit_company_job_path(job) %>
-    <%= link_to "Delete", company_jobs_path(job), method: "delete" %>
+    <%= link_to "Edit", edit_job_path(job) %>
+    <%= link_to "Delete", job_path(job), method: "delete" %>
   </li>
   <% end %>
 </ul>
