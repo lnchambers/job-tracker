@@ -3,7 +3,7 @@ Rails.application.routes.draw do
 
   root "welcome#index"
 
-  resources :companies do
+  resources :companies, shallow: true do
     resources :jobs
   end
   # The priority is based upon order of creation: first created -> highest priority.

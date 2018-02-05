@@ -2,7 +2,6 @@ class JobsController < ApplicationController
   def index
     @company = Company.find(params[:company_id])
     @jobs = @company.jobs
-    binding.pry
   end
 
   def new
@@ -26,6 +25,7 @@ class JobsController < ApplicationController
   end
 
   def edit
+    binding.pry
     @job = Job.find(params[:id])
   end
 
