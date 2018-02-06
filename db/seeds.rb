@@ -7,16 +7,14 @@ CITIES = ["Seattle", "Denver", "Portland", "Indianapolis", "Madison", "Orlando",
 CATEGORIES = ["Software", "Hardware", "Middleware", "Firmware", "Warewolf", "Warebat", "Waregoing?", "Spyware", "Botware", "Wareware"]
 
 CATEGORIES.each do |title|
-  category = Category.create!(title: title)
-  puts "You did the #{category.title}"
+  Category.create!(title: title)
 end
 
 COMPANIES.each do |name|
   company = Company.create!(name: name)
   puts "Created #{company.name}"
   10.times do |num|
-    binding.pry
-    company.jobs.create!(title: JOBS.sample, description: "What a great position!", level_of_interest: num + rand(100), city: CITIES.sample, categories_id: rand(1..10))
+    company.jobs.create!(title: JOBS.sample, description: "What a great position!", level_of_interest: num + rand(100), city: CITIES.sample, categories_id: rand(10) + 1)
     puts "Created #{company.jobs[num].title}"
   end
 end

@@ -6,4 +6,12 @@ FactoryBot.define do
   factory :category do
     title "Eupanifahorious"
   end
+
+  factory :job do
+    title "Work For Free"
+    level_of_interest 100
+    city "Home"
+    category
+    company
+  end
 end

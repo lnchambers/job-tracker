@@ -1,6 +1,7 @@
 require 'rails_helper'
 
 describe "User sees all companies" do
+  before
   scenario "a user sees all the companies" do
     create(:company)
     create(:company, name: "ESPN")
