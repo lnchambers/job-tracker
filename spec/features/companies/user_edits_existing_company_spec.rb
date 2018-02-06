@@ -10,6 +10,6 @@ describe "User edits an existing company" do
 
     expect(current_path).to eq("/companies/#{Company.last.id}/jobs")
     expect(page).to have_content("EA Sports")
-    expect(page).to_not have_content("ESPN")
+    expect(page).to_not have_content(company.name)
   end
 end
