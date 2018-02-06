@@ -1,6 +1,4 @@
 Rails.application.routes.draw do
-  resources :welcome, only: [:index]
-
   root "welcome#index"
 
   resources :companies, shallow: true do
