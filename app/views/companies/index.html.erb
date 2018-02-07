@@ -10,7 +10,8 @@
         <%= link_to "Dashboard", dashboard_path %>
       </nav>
       <section class="main-side-bottom">
-        <ul>
+        <h1>All Companies</h1>
+        <section class="companies">
           <% @companies.each do |company| %>
           <div class="company-card">
             <%= link_to company.name, company_path(company) %>:
@@ -18,7 +19,8 @@
             <%= link_to "Delete", company_path(company), method: "delete" %>
           </div>
           <% end %>
-        </ul>
+        </section>
+        <%= link_to "Create New Company", new_company_path %>
       </section>
     </section>
   </section>

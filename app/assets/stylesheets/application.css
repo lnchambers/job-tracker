@@ -86,6 +86,7 @@
    width: 1070px;
    height: 85%;
    display: flex;
+   flex-direction: row;
    flex-wrap: wrap;
    overflow: scroll;
  }
@@ -113,8 +114,9 @@
    color: #d8dbd1;
  }
 
- a:visited {
-   color: #889572;
+ .companies {
+   display: flex;
+   justify-content: space-around;
  }
 
  .company-card {
@@ -126,6 +128,14 @@
    height: 150px;
    background: linear-gradient(#898989, #fff);
    margin: 10px;
+ }
+
+ .company-card a {
+   font-size: 12pt;
+ }
+
+ .company-card a:hover {
+   color: #5da271;
  }
 
  .flash {
