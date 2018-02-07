@@ -18,10 +18,7 @@
 
         Company: <%= link_to @job.company.name, company_path(@job.company) %>
 
-        Comments: <ul>
-          <% @job.comments.each do |comment| %>
-            <li><%= comment %></li>
-          <% end %>
+        Comments: 
       </section>
     </section>
   </section>

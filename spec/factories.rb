@@ -14,4 +14,9 @@ FactoryBot.define do
     category
     company
   end
+
+  factory :comment do
+    body "Co-Meant"
+    job
+  end
 end
