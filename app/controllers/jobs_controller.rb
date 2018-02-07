@@ -2,12 +2,8 @@ class JobsController < ApplicationController
 
   def index
     @jobs = Job.all
-    @jobs = sort_jobs(params, @jobs)
-    if params[:location]
-      @jobs = Job.where("city LIKE ?", params[:location])
-    else
-      @jobs
-    end
+    @jobs = sort(params, @jobs)
+    @jobs = Job.where("city = #{params[:location]}") if params[:location]
   end
 
   def new
@@ -59,10 +55,10 @@ class JobsController < ApplicationController
     params.require(:job).permit(:title, :description, :level_of_interest, :city)
   end
 
-  def sort_jobs(params, jobs)
-    if params[:sort] == "location"
+  def sort(params, jobs)
+    if params[:show] == "location"
       jobs = jobs.order(:city)
-    elsif params[:sort] == "interest"
+    elsif params[:show] == "interest"
       jobs = jobs.order(level_of_interest: :desc)
     end
   end
