@@ -3,11 +3,14 @@ require "rails_helper"
 describe "As a user" do
   describe "when I visit jobs dashboard" do
     scenario "I can see a count of jobs by city" do
-      create(:job)
-      create(:job)
-      create(:job)
-      create(:job, city: "Denver")
-      create(:job, city: "Denver")
+      category = create(:category)
+      company = Company.create!(name: "Turing")
+      company_2 = Company.create!(name: "Not Turing")
+      job = Job.create!(title: "Developer", level_of_interest: 40, city: "Denver", company: company, category: category)
+      job = Job.create!(title: "Develope", level_of_interest: 40, city: "Denver", company: company, category: category)
+      job = Job.create!(title: "Developr", level_of_interest: 40, city: "Denver", company: company, category: category)
+      job = Job.create!(title: "Develoer", level_of_interest: 40, city: "Home", company: company_2, category: category)
+      job = Job.create!(title: "Develper", level_of_interest: 40, city: "Home", company: company_2, category: category)
 
       visit dashboard_path
 
