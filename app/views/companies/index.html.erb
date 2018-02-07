@@ -14,7 +14,7 @@
         <section class="companies">
           <% @companies.each do |company| %>
           <div class="company-card">
-            <%= link_to company.name, company_path(company) %>:
+            <%= link_to company.name, company_path(company) %><br>
             <%= link_to "Edit", edit_company_path(company) %>
             <%= link_to "Delete", company_path(company), method: "delete" %>
           </div>
