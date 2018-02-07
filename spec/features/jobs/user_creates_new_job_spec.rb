@@ -15,8 +15,7 @@ describe "User creates a new job" do
     select(@category.title, from: 'job[category_id]')
     click_button "Create Job"
 
-    expect(current_path).to eq("/companies/1/jobs")
-    expect(page).to have_content("ESPN")
+    expect(current_path).to eq("/jobs/1")
     expect(page).to have_content("Developer")
     expect(page).to have_content("80")
     expect(page).to have_content("Denver")

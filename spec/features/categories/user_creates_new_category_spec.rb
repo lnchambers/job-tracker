@@ -7,7 +7,7 @@ describe "User creates a new category" do
     fill_in "category[title]", with: "Opakawagalaga"
     click_button "Create"
 
-    expect(current_path).to eq("/categories")
+    expect(current_path).to eq("/categories/1")
     expect(page).to have_content("Opakawagalaga")
     expect(Category.count).to eq(1)
   end

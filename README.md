@@ -36,11 +36,11 @@ The rubric below describes additional functionality that you will need to add to
 
 [ ] When the user tries to create a Category that already exists, they are brought back to the page with the form to create a Category.
 
-[ ] The user can view a list of all Categories on a single page, and each Category can be deleted from that page. There is also a link to “Edit” each Category, which takes the user to a form where they can update the Category.
+[x] The user can view a list of all Categories on a single page, and each Category can be deleted from that page. There is also a link to “Edit” each Category, which takes the user to a form where they can update the Category.
 
-[ ] When the user creates a new Job, they are required to select its Category from a drop down menu of existing categories. They also see a link to create a new Category.
+[x] When the user creates a new Job, they are required to select its Category from a drop down menu of existing categories. They also see a link to create a new Category.
 
-[ ] When the user visits a page for a specific Category, they see a list of Jobs in that Category.
+[x] When the user visits a page for a specific Category, they see a list of Jobs in that Category.
 
 ### Comments
 
@@ -66,71 +66,71 @@ The rubric below describes additional functionality that you will need to add to
 
 [ ] The user can visit `/dashboard` to see
 
-    [] A count of jobs by `level_of_interest`
+    [ ] A count of jobs by `level_of_interest`
 
-    [] The top three companies ranked by average level of interest along with their respective average level of interest.
+    [ ] The top three companies ranked by average level of interest along with their respective average level of interest.
 
-    [] A count of jobs by `location` with a link to visit a page with jobs only in that location. The url should be `/jobs?location=Denver`.
+    [ ] A count of jobs by `location` with a link to visit a page with jobs only in that location. The url should be `/jobs?location=Denver`.
 
 [ ] The user can visit `/jobs?sort=interest` to view a list of the jobs sorted by `level_of_interest`.
 
 ### Databases
 
-[ ] The database has appropriate tables and columns to create relationships between tables
+[x] The database has appropriate tables and columns to create relationships between tables
 
-[ ] Table and column names follow convention
+[x] Table and column names follow convention
 
 ### Routes
 
-[ ] Routes are defined for all functionality and not any additional functionality
+[x] Routes are defined for all functionality and not any additional functionality
 
-[ ] All routes conform to RESTful conventions for resources
+[x] All routes conform to RESTful conventions for resources
 
-[ ] Routes to pages that are not specifically for resources stored in the database are not named in a way that an experienced developer would find surprising
+[x] Routes to pages that are not specifically for resources stored in the database are not named in a way that an experienced developer would find surprising
 
 ### Controllers
 
-[ ] The developer has moved logic out of the controllers and into the models/POROs where appropriate.
+[x] The developer has moved logic out of the controllers and into the models/POROs where appropriate.
 
-[ ] The developer uses strong params in a private method
+[x] The developer uses strong params in a private method
 
-[ ] Instance variables being passed to views are appropriately named and limited in number
+[x] Instance variables being passed to views are appropriately named and limited in number
 
 ### ActiveRecord
 
-[ ] ActiveRecord methods are used in models to supply all appropriate functionality
+[x] ActiveRecord methods are used in models to supply all appropriate functionality
 
-[ ] Methods exist on the appropriate model
+[x] Methods exist on the appropriate model
 
-[ ] Developers are not referencing other classes or `self` in models unnecessarily
+[x] Developers are not referencing other classes or `self` in models unnecessarily
 
-[ ] Ruby enumerables are not used where ActiveRecord methods could provide the necessary functionality
+[x] Ruby enumerables are not used where ActiveRecord methods could provide the necessary functionality
 
-[ ] Developer can explain the ActiveRecord methods they used and the relationships between ActiveRecord models
+[x] Developer can explain the ActiveRecord methods they used and the relationships between ActiveRecord models
 
 ### Views
 
-[ ] Logic has been removed from views and controllers to the full degree possible
+[x] Logic has been removed from views and controllers to the full degree possible
 
-[ ] Developer ha minimized the number of variables passed to the view
+[x] Developer ha minimized the number of variables passed to the view
 
-[ ] Developer can articulately explain their strategies for extracting this logic
+[x] Developer can articulately explain their strategies for extracting this logic
 
-[ ] Developer uses partials to reduce duplication of code in the view layer
+[x] Developer uses partials to reduce duplication of code in the view layer
 
 ### User Experience
 
-[ ] The application has been styled and the user can easily navigate between different portions of the application without manually entering the URL into the nav-bar or using the back button on their browser.
+[x] The application has been styled and the user can easily navigate between different portions of the application without manually entering the URL into the nav-bar or using the back button on their browser.
 
 ### Testing
 
-[ ] Project has a running test suite
+[x] Project has a running test suite
 
-[ ] Test suite includes robust feature tests
+[x] Test suite includes robust feature tests
 
-[ ] Test suite includes tests for validations
+[x] Test suite includes tests for validations
 
-[ ] Test suite includes tests for methods that they have created on the models
+[x] Test suite includes tests for methods that they have created on the models
 
 ## Extensions:
 
