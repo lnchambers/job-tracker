@@ -5,11 +5,11 @@ describe "User edits an existing category" do
     category = create(:category)
     visit edit_category_path(category)
 
-    fill_in "category[name]", with: "EA Sports"
+    fill_in "category[title]", with: "EA Sports"
     click_button "Update"
 
-    expect(current_path).to eq("/companies/#{Category.last.id}/jobs")
+    expect(current_path).to eq("/categories/1")
     expect(page).to have_content("EA Sports")
-    expect(page).to_not have_content(category.name)
+    expect(page).to_not have_content(category.title)
   end
 end

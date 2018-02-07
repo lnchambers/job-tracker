@@ -5,7 +5,7 @@ describe "User deletes existing category" do
     category = create(:category)
     visit companies_path
 
-    within(".category_#{category.id}") do
+    within("category_#{category.id}") do
       click_link "Delete"
     end
 
