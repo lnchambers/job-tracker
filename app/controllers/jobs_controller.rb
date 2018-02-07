@@ -56,9 +56,9 @@ class JobsController < ApplicationController
   end
 
   def sort(params, jobs)
-    if params[:show] == "location"
+    if params[:sort] == "location"
       jobs = jobs.order(:city)
-    elsif params[:show] == "interest"
+    elsif params[:sort] == "interest"
       jobs = jobs.order(level_of_interest: :desc)
     end
   end
