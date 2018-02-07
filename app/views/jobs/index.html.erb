@@ -10,11 +10,14 @@
         Contacts:<br>
         <% @company.contacts.each do |contact| %>
           <ul>
-          <li><%= contact.name %></li>
-          <li><%= contact.position %></li>
-          <li><%= contact.email %></li>
-        <% end %>
-        </ul>
+            <li><%= contact.name %></li>
+            <li><%= contact.position %></li>
+            <li><%= contact.email %></li>
+          </ul>
+        <% end %><br>
+
+        Not finding who you are looking for? Create a new contact.<br>
+        <%= render partial: "contact" %>
 
         <ul>
           <% @jobs.each do |job| %>
