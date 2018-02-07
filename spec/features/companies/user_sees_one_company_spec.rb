@@ -9,7 +9,7 @@ describe "User sees one company" do
   scenario "a user sees a company" do
     visit company_path(@company)
 
-    expect(current_path).to eq("/companies/#{@job.company_id}/jobs")
+    expect(current_path).to eq("/companies/#{@company.id}")
     expect(page).to have_content("Opakawagalaga")
   end
 

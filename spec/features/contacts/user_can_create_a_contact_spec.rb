@@ -10,7 +10,7 @@ describe "User creates a new contact" do
     fill_in "contact[email]", with: "I'm not giving that to you!"
     click_button "Create Contact"
 
-    expect(current_path).to eq("/companies/1/jobs")
+    expect(current_path).to eq("/companies/1")
     expect(page).to have_content("Opakawagalaga")
     expect(page).to have_content("I don't work here")
   end

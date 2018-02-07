@@ -1,9 +1,12 @@
 class JobsController < ApplicationController
 
   def index
-    @company = Company.find(params[:company_id])
-    @contact = Contact.new
-    @jobs = @company.jobs
+    if params[:location]
+      @jobs = Job.where("city LIKE ?", params[:location])
+    else
+      @jobs = Job.all
+    end
+    @jobs = sort_jobs(params)
   end
 
   def new
@@ -46,12 +49,20 @@ class JobsController < ApplicationController
     job = Job.find(params[:id])
     job.destroy
     flash[:success] = "#{job.title} was successfully deleted!"
-    redirect_to company_jobs_path(job.company_id)
+    redirect_to company_path(job.company_id)
   end
 
   private
 
   def job_params
     params.require(:job).permit(:title, :description, :level_of_interest, :city)
+  end
+
+  def sort_jobs(params)
+    if params[:sort] == "location"
+      @jobs = @jobs.order(:city)
+    elsif params[:sort] == "interest"
+      @jobs = @jobs.order(level_of_interest: :desc)
+    end
   end
 end

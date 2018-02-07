@@ -20,7 +20,7 @@
         <%= render partial: "contact" %>
 
         <ul>
-          <% @jobs.each do |job| %>
+          <% @company.jobs.each do |job| %>
           <li class=job_<%= job.id %>>
             <%= link_to job.title, job_path(job) %>:
             <%= link_to "Edit", edit_job_path(job) %>

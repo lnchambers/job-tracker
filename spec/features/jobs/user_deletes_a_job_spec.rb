@@ -4,7 +4,7 @@ describe "As a user" do
   scenario "I can delete a job" do
     job = create(:job)
 
-    visit company_jobs_path(job.company, job)
+    visit company_path(job.company_id)
 
     click_on "Delete"
 
