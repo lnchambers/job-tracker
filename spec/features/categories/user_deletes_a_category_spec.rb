@@ -3,12 +3,12 @@ require 'rails_helper'
 describe "User deletes existing category" do
   scenario "a user can delete a category" do
     category = create(:category)
-    visit companies_path
+    visit categories_path
 
-    within("category_#{category.id}") do
+    within(".category_#{category.id}") do
       click_link "Delete"
     end
 
-    expect(page).to have_content("Opakawagalaga was successfully deleted!")
+    expect(page).to have_content("Eupanifahorious was successfully deleted!")
   end
 end
