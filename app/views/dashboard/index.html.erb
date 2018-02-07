@@ -1,0 +1,40 @@
+<main class="main-container">
+  <section class="main-left"></section>
+  <section class="main-side">
+    <section class="main-side-container">
+      <section class="main-side-top"></section>
+      <section class="main-side-bottom">
+        <table>
+          <th>Company Name</th>
+          <th>Average Job Interest</th>
+        <% @top_companies.each do |company| %>
+          <tr>
+          <td><%= company.name %></td>
+          <td><%= company.avg_interest.round %></td>
+          </tr>
+        <% end %>
+        </table>
+        <table>
+          <th>Interest Range</th>
+          <th>Count of Jobs</th>
+          <% @interests.each do |range, count| %>
+          <tr>
+            <td><%= range %></td>
+            <td><%= count %></td>
+          </tr>
+          <% end %>
+        </table>
+        <table>
+          <th>City</th>
+          <th>Count of Jobs</th>
+          <% @locations.each do |city, count| %>
+          <tr>
+            <td><%= link_to "#{city}", "/jobs?location=#{city}" %></td>
+            <td><%= count %></td>
+          </tr>
+          <% end %>
+        </table>
+      </section>
+    </section>
+  </section>
+</main>

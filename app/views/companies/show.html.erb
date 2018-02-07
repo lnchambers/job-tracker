@@ -6,14 +6,28 @@
       <section class="main-side-bottom">
         All Jobs for <strong><%= @company.name %></strong>
 
-        <% @company.jobs.each do |job| %>
+        <br>
+        Contacts:<br>
+        <% @company.contacts.each do |contact| %>
           <ul>
-            <li><%= job.title %></li>
-            <li><%= job.description %></li>
-            <li><%= job.level_of_interest %></li>
-            <li><%= job.city %></li>
+            <li>Name: <%= contact.name %></li>
+            <li>Position: <%= contact.position %></li>
+            <li>Email: <%= contact.email %></li>
           </ul>
-        <% end %>
+        <% end %><br>
+
+        Not finding who you are looking for? Create a new contact.<br>
+        <%= render partial: "contact" %>
+
+        <ul>
+          <% @company.jobs.each do |job| %>
+          <li class=job_<%= job.id %>>
+            <%= link_to job.title, job_path(job) %>:
+            <%= link_to "Edit", edit_job_path(job) %>
+            <%= link_to "Delete", job_path(job), method: "delete" %>
+          </li>
+          <% end %>
+        </ul>
       </section>
     </section>
   </section>
