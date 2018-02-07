@@ -60,6 +60,8 @@ class JobsController < ApplicationController
       jobs = jobs.order(:city)
     elsif params[:sort] == "interest"
       jobs = jobs.order(level_of_interest: :desc)
+    else
+      jobs
     end
   end
 end
