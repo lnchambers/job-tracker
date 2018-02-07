@@ -6,11 +6,11 @@ describe "As a user" do
       category = create(:category)
       company = Company.create!(name: "Turing")
       company_2 = Company.create!(name: "Not Turing")
-      job = Job.create!(title: "Developer", level_of_interest: 40, city: "Denver", company: company, category: category)
-      job = Job.create!(title: "Develope", level_of_interest: 40, city: "Denver", company: company, category: category)
-      job = Job.create!(title: "Developr", level_of_interest: 40, city: "Denver", company: company, category: category)
-      job = Job.create!(title: "Develoer", level_of_interest: 40, city: "Home", company: company_2, category: category)
-      job = Job.create!(title: "Develper", level_of_interest: 40, city: "Home", company: company_2, category: category)
+      Job.create!(title: "Developer", level_of_interest: 40, city: "Denver", company: company, category: category)
+      Job.create!(title: "Develope", level_of_interest: 40, city: "Denver", company: company, category: category)
+      Job.create!(title: "Developr", level_of_interest: 40, city: "Denver", company: company, category: category)
+      Job.create!(title: "Develoer", level_of_interest: 40, city: "Home", company: company_2, category: category)
+      Job.create!(title: "Develper", level_of_interest: 40, city: "Home", company: company_2, category: category)
 
       visit dashboard_path
 
