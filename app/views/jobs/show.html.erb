@@ -17,8 +17,18 @@
         <br>
 
         Company: <%= link_to @job.company.name, company_path(@job.company) %>
+        <br>
 
-        Comments: 
+        Comments:<br>
+        <ul>
+        <% @job.comments.each do |comment| %>
+          <li><%= comment.body %></li>
+        <% end %>
+        </ul>
+        <br>
+
+        Need to create a new comment?<br>
+        <%= render partial: "comment" %>
       </section>
     </section>
   </section>
