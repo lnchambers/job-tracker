@@ -1,8 +1,11 @@
 class DashboardController < ApplicationController
   def index
-    @jobs = Job.all
+    if params[:location]
+      @jobs = Job.where("city LIKE ?", params[:location])
+    else
+      @jobs = Job.all
+    end
     @jobs = sort_jobs(params)
-    @jobs = filter_location(params)
     @top_companies = Company.top_three
     @interests = Job.interests
     @locations = Job.locations
@@ -14,9 +17,5 @@ class DashboardController < ApplicationController
     elsif params[:sort] == "interest"
       @jobs = @jobs.order(level_of_interest: :desc)
     end
-  end
-
-  def filter_location(params)
-    @jobs = Job.where("city == ?", params[:location]) if params[:location]
   end
 end

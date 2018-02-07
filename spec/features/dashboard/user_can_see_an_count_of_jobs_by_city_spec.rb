@@ -9,7 +9,7 @@ describe "As a user" do
       create(:job, city: "Denver")
       create(:job, city: "Denver")
 
-      visit jobs_path
+      visit dashboard_path
 
       expect(page).to have_content("Home")
       expect(page).to have_content("Denver")
