@@ -10,6 +10,14 @@
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
 //
-//= require rails-ujs
-//= require turbolinks
-//= require_tree .
+// = require rails-ujs
+// = require turbolinks
+// = require_tree .
+
+console.log("Hello")
+
+$(".home-side-bottom-h1").on("click", expand);
+function expand () {
+  console.log("Should be in a string")
+  $(".home-side-bottom-h1").text("fast")
+}
