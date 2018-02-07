@@ -12,14 +12,6 @@
             <li><%= job.description %></li>
             <li><%= job.level_of_interest %></li>
             <li><%= job.city %></li>
-          </ul><br>
-          Contacts:<br>
-          <% @Company.contacts.each do |contact| %>
-            <ul>
-            <li><%= contact.name %></li>
-            <li><%= contact.position %></li>
-            <li><%= contact.email %></li>
-          <% end %>
           </ul>
         <% end %>
       </section>

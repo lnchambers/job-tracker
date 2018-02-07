@@ -6,9 +6,15 @@
       <section class="main-side-bottom">
         All Jobs for <strong><%= @company.name %></strong>
 
-        <% @jobs.each do |job| %>
-          <ul><%= job.title %> at <%= job.company.name %></ul>
+        <br>
+        Contacts:<br>
+        <% @company.contacts.each do |contact| %>
+          <ul>
+          <li><%= contact.name %></li>
+          <li><%= contact.position %></li>
+          <li><%= contact.email %></li>
         <% end %>
+        </ul>
 
         <ul>
           <% @jobs.each do |job| %>

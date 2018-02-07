@@ -7,23 +7,23 @@ describe "User sees one company" do
     @contact = create(:contact, company: @company)
   end
   scenario "a user sees a company" do
-    visit company_path(@job.company_id)
+    visit company_path(@company)
 
     expect(current_path).to eq("/companies/#{@job.company_id}/jobs")
     expect(page).to have_content("Opakawagalaga")
   end
 
   scenario "a user sees a company's contacts" do
-    visit company_path(@job.company_id)
+    visit company_path(@company)
 
     expect(page).to have_content(@company.name)
     expect(page).to have_content(@contact.name)
-    expect(page).to have_content(@contact.title)
+    expect(page).to have_content(@contact.position)
     expect(page).to have_content(@contact.email)
   end
 
   scenario "a user sees a company's jobs" do
-    visit company_path(@job.company_id)
+    visit company_path(@company)
 
     expect(page).to have_content(@company.name)
     expect(page).to have_content(@job.title)
