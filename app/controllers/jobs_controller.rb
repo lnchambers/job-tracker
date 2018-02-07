@@ -2,6 +2,7 @@ class JobsController < ApplicationController
 
   def index
     @company = Company.find(params[:company_id])
+    @contact = Contact.new
     @jobs = @company.jobs
   end
 

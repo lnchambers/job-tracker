@@ -6,9 +6,18 @@
       <section class="main-side-bottom">
         All Jobs for <strong><%= @company.name %></strong>
 
-        <% @jobs.each do |job| %>
-          <ul><%= job.title %> at <%= job.company.name %></ul>
-        <% end %>
+        <br>
+        Contacts:<br>
+        <% @company.contacts.each do |contact| %>
+          <ul>
+            <li>Name: <%= contact.name %></li>
+            <li>Position: <%= contact.position %></li>
+            <li>Email: <%= contact.email %></li>
+          </ul>
+        <% end %><br>
+
+        Not finding who you are looking for? Create a new contact.<br>
+        <%= render partial: "contact" %>
 
         <ul>
           <% @jobs.each do |job| %>

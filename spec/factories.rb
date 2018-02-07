@@ -19,4 +19,11 @@ FactoryBot.define do
     body "Co-Meant"
     job
   end
+
+  factory :contact do
+    name "Name"
+    position "Position"
+    email "nocreativityleft@gmail.com"
+    company
+  end
 end
