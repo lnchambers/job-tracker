@@ -21,7 +21,7 @@
 
         Comments:<br>
         <ul>
-        <% @job.comments.each do |comment| %>
+        <% @job.comments.reverse.each do |comment| %>
           <li><%= comment.body %></li>
         <% end %>
         </ul>
