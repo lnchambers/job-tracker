@@ -4,9 +4,9 @@
     <section class="main-side-container">
       <section class="main-side-top"></section>
       <section class="main-side-bottom">
-        All Jobs for <strong><%= @company.name %></strong>
+        All Jobs for <strong><%= @category.title %></strong>
 
-        <% @company.jobs.each do |job| %>
+        <% @category.jobs.each do |job| %>
           <ul>
             <li><%= job.title %></li>
             <li><%= job.description %></li>

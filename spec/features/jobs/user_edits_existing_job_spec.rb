@@ -3,9 +3,8 @@ require "rails_helper"
 describe "As a User" do
   describe "when I visit /jobs/:id/edit" do
     scenario "I can edit a specific job" do
-      company = Company.create!(name: "Opakawagalaga")
-      job = Job.create!(title: "Work For Free", description: "You get paid nothing", level_of_interest: 100, city: "Home", company: company)
-
+      job = create(:job)
+      
       visit edit_job_path(job)
 
       fill_in "job[title]", with: "Work For Money"
