@@ -3,7 +3,6 @@ class JobsController < ApplicationController
   def index
     @jobs = Job.all
     @jobs = sort(params, @jobs)
-    binding.pry
     @jobs = Job.where("city = #{params[:location]}") if params[:location]
   end
 
