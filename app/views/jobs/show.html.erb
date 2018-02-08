@@ -37,7 +37,7 @@
         <%= render partial: "comment" %>
         <br>
 
-        Tags:<br>
+        <%= link_to "Tags:", tags_path %><br>
         <ul>
           <% @job.tags.each do |tag| %>
               <li> <%= link_to "#{tag.title}", tag_path(tag) %> </li>
