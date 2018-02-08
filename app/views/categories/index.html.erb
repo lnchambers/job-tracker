@@ -13,7 +13,7 @@
         <h1>All Categories</h1>
         <section class="companies">
           <% @categories.each do |category| %>
-          <div class="company-card"
+          <div class="company-card">
             <%= link_to category.title, category_path(category) %>:
             <%= link_to "Edit", edit_category_path(category) %>
             <%= link_to "Delete", category_path(category), method: "delete" %>
