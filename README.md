@@ -1,5 +1,19 @@
 # Job Tracker
 
+---
+Welcome to Job Hunter.
+
+There are a few things you need to do to set up before you can start. Here are the steps.
+
+* Run 'git clone https://github.com/lnchambers/job-tracker.git' from your terminal in the directory you want to clone to.
+
+* Run 'bundle install'
+
+* Run 'rails db:setup'
+
+* Run 'rails s' and use your favorite web browser to go to localhost:3000
+---
+
 ## Learning Goals
 
 * Use migrations to create tables with different data types including indexed foreign keys
