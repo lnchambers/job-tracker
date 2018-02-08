@@ -14,6 +14,8 @@
           <% @tags.each do |tag| %>
             <ul>
               <li><%= link_to tag.title, tag_path(tag) %></li>
+              <%= link_to "Edit", edit_tag_path(tag) %>
+              <%= link_to "Delete", tag_path(tag), method: "delete" %>
             </ul>
           <% end %>
       </section>
