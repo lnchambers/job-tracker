@@ -1,2 +1,19 @@
-<h1>Tags#new</h1>
-<p>Find me in app/views/tags/new.html.erb</p>
+<main class="main-container">
+  <section class="main-left"></section>
+  <section class="main-side">
+    <section class="main-side-container">
+      <section class="main-side-top"></section>
+      <nav class="nav">
+        <%= link_to "Companies", companies_path %>
+        <%= link_to "Jobs", jobs_path %>
+        <%= link_to "Categories", categories_path %>
+        <%= link_to "Dashboard", dashboard_path %>
+      </nav>
+      <section class="main-side-bottom">
+        <h2>Create a new tag here!</h2>
+
+        <%= render partial: "form" %>
+      </section>
+    </section>
+  </section>
+</main>

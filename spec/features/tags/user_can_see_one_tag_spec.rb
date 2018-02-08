@@ -3,9 +3,9 @@ require "rails_helper"
 describe "As a User" do
   describe "when I visit a specific tags page" do
     it "I can see a list of all jobs with that tag" do
-      job = create(:job)
       tag = create(:tag)
-      job.tags << tag
+      job = create(:job)
+      JobsTag.create!(tag: tag, job: job)
 
       visit tag_path(tag)
 
