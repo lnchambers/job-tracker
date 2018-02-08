@@ -1,17 +1,4 @@
 Rails.application.routes.draw do
-  get 'tags/index'
-
-  get 'tags/new'
-
-  get 'tags/create'
-
-  get 'tags/show'
-
-  get 'tags/edit'
-
-  get 'tags/update'
-
-  get 'tags/destroy'
 
   get 'errors/not_found'
 
@@ -29,6 +16,8 @@ Rails.application.routes.draw do
   resources :jobs, only: [:index]
 
   resources :categories
+
+  resources :tags
 
   get "dashboard", :to => "dashboard#index"
 
