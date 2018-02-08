@@ -1,2 +1,26 @@
-<h1>Tags#show</h1>
-<p>Find me in app/views/tags/show.html.erb</p>
+<main class="main-container">
+  <section class="main-left"></section>
+  <section class="main-side">
+    <section class="main-side-container">
+      <section class="main-side-top"></section>
+      <nav class="nav">
+        <%= link_to "Companies", companies_path %>
+        <%= link_to "Jobs", jobs_path %>
+        <%= link_to "Categories", categories_path %>
+        <%= link_to "Dashboard", dashboard_path %>
+      </nav>
+      <section class="main-side-bottom">
+        All Jobs for <strong><%= @tag.title %></strong>
+
+        <% @tag.jobs.each do |job| %>
+          <ul>
+            <li><%= job.title %></li>
+            <li><%= job.description %></li>
+            <li><%= job.level_of_interest %></li>
+            <li><%= job.city %></li>
+          </ul>
+        <% end %>
+      </section>
+    </section>
+  </section>
+</main>
