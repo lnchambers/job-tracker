@@ -14,10 +14,9 @@
 
         <% @tag.jobs.each do |job| %>
           <ul>
-            <li><%= job.title %></li>
-            <li><%= job.description %></li>
-            <li><%= job.level_of_interest %></li>
-            <li><%= job.city %></li>
+            <li>Title: <%= link_to "#{job.title}", job_path(job) %></li>
+            <li>Level of Interest: <%= job.level_of_interest %></li>
+            <li>City: <%= job.city %></li>
           </ul>
         <% end %>
       </section>
