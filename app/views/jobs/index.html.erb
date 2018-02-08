@@ -11,14 +11,16 @@
       </nav>
       <section class="main-side-bottom">
         <h3>All Jobs</h3>
+        <section class="companies">
           <% @jobs.each do |job| %>
-            <ul>
-              <li><%= link_to job.title, job_path(job) %></li>
-              <li><%= job.company.name %></li>
-              <li><%= job.level_of_interest %></li>
-              <li><%= job.city %></li>
-            </ul>
+            <div class="company-card">
+              <%= link_to job.title, job_path(job) %><br>
+              Company: <%= job.company.name %><br>
+              Interest: <%= job.level_of_interest %><br>
+              City: <%= job.city %><br>
+            </div>
           <% end %>
+        </section>
       </section>
     </section>
   </section>
