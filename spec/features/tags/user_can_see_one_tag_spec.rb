@@ -5,7 +5,7 @@ describe "As a User" do
     it "I can see a list of all jobs with that tag" do
       tag = create(:tag)
       job = create(:job)
-      JobsTag.create!(tag: tag, job: job)
+      tag.jobs << job
 
       visit tag_path(tag)
 

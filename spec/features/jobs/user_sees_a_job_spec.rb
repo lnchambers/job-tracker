@@ -11,4 +11,14 @@ describe "User sees a specific job" do
     expect(page).to have_content(comment.job.level_of_interest)
     expect(page).to have_content(comment.body)
   end
+
+  scenario "a user sees the tags associated with a job" do
+    tag = create(:tag)
+    job = create(:job)
+    job.tags << tag
+
+    visit job_path(job)
+
+    expect(page).to have_content(tag.title)
+  end
 end

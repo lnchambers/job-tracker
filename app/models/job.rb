@@ -3,8 +3,7 @@ class Job < ApplicationRecord
   belongs_to :company
   belongs_to :category, optional: true
   has_many :comments
-  has_many :jobs_tag
-  has_many :tags, through: :jobs_tag
+  has_many :tags
 
   def self.interests
     interest = {}

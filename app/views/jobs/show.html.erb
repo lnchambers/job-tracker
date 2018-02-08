@@ -35,6 +35,14 @@
 
         Need to create a new comment?<br>
         <%= render partial: "comment" %>
+        <br>
+
+        Tags:<br>
+        <ul>
+          <% @job.tags.each do |tag| %>
+              <li> <%= link_to "#{tag.title}", tag_path(tag) %> </li>
+          <% end %>
+        </ul>
       </section>
     </section>
   </section>
