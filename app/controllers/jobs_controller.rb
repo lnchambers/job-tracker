@@ -3,7 +3,7 @@ class JobsController < ApplicationController
   def index
     @jobs = Job.all
     @jobs = sort(params, @jobs)
-    @jobs = Job.where("city = #{params[:location]}") if params[:location]
+    @jobs = Job.where(city: "#{params[:location]}") if params[:location]
   end
 
   def new
@@ -60,6 +60,8 @@ class JobsController < ApplicationController
       jobs = jobs.order(:city)
     elsif params[:sort] == "interest"
       jobs = jobs.order(level_of_interest: :desc)
+    else
+      jobs
     end
   end
 end

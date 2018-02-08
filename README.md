@@ -136,14 +136,14 @@ The rubric below describes additional functionality that you will need to add to
 
 ### Tags
 
-[ ] The user is able to create new Tags from a form on the website.
+[x] The user is able to create new Tags from a form on the website.
 
-[ ] Each tag has a Title (e.g. “interview scheduled”, “waiting to hear back”, “email sent”, “research complete”, etc.).
+[x] Each tag has a Title (e.g. “interview scheduled”, “waiting to hear back”, “email sent”, “research complete”, etc.).
 
-[ ] The user is able to view a list of Tags
+[x] The user is able to view a list of Tags
 
-[ ] The user is able to delete Tags from the list of Tags.
+[x] The user is able to delete Tags from the list of Tags.
 
-[ ] The list of tags also has a link to “Edit” each tag.
+[x] The list of tags also has a link to “Edit” each tag.
 
-[ ] When a user visits the site for a specific Tag they see a list of all jobs with that Tag.
+[x] When a user visits the site for a specific Tag they see a list of all jobs with that Tag.

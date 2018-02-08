@@ -44,5 +44,10 @@ describe Job do
       job = create(:job)
       expect(job).to respond_to(:comments)
     end
+
+    it "has many tags" do
+      job = create(:job)
+      expect(job).to respond_to(:tags)
+    end
   end
 end

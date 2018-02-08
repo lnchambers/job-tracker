@@ -10,17 +10,9 @@
         <%= link_to "Dashboard", dashboard_path %>
       </nav>
       <section class="main-side-bottom">
-        <h1>All Categories</h1>
-        <section class="companies">
-          <% @categories.each do |category| %>
-          <div class="company-card">
-            <%= link_to category.title, category_path(category) %>:
-            <%= link_to "Edit", edit_category_path(category) %>
-            <%= link_to "Delete", category_path(category), method: "delete" %>
-          </div>
-          <% end %>
-        </section>
-        <%= link_to "Create New Category", new_category_path %>
+        <h2>Edit <%= @tag.title %> here!</h2>
+
+        <%= render partial: "form" %>
       </section>
     </section>
   </section>
