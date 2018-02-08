@@ -1,4 +1,7 @@
 FactoryBot.define do
+  factory :tag do
+    title "MyText"
+  end
   factory :company do
     name "Opakawagalaga"
   end

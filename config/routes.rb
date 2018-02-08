@@ -1,4 +1,18 @@
 Rails.application.routes.draw do
+  get 'tags/index'
+
+  get 'tags/new'
+
+  get 'tags/create'
+
+  get 'tags/show'
+
+  get 'tags/edit'
+
+  get 'tags/update'
+
+  get 'tags/destroy'
+
   get 'errors/not_found'
 
   get 'errors/internal_server_error'
