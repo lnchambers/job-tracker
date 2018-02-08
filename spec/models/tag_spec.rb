@@ -14,4 +14,11 @@ RSpec.describe Tag, type: :model do
       expect(tag).to be_valid
     end
   end
+
+  describe "Relationships" do
+    it "has many jobs" do
+      tag = create(:tag)
+      expect(tag).to respond_to(:jobs)
+    end
+  end
 end
